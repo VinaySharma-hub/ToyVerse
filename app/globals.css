@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tv-primary: #ff6b35;
+  --tv-secondary: #4ecdc4;
+  --tv-accent: #ffe66d;
+  --tv-space: #1a1a2e;
+  --tv-portal: #0a0a2e;
+  --tv-cream: #fff9f0;
+  --tv-ink: #2d2d2d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-body antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--tv-accent) 55%, white);
+  color: var(--tv-ink);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
